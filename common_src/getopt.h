@@ -26,7 +26,7 @@ extern int opterr;		/* flag to enable built-in diagnostics... */
 
 extern char *optarg;		/* pointer to argument of current option  */
 
-extern int getopt(int nargc, char * const *nargv, const char *options);
+extern int getopt(int nargc, char *nargv[], const char *options);
 
 #ifdef _BSD_SOURCE
 /*
