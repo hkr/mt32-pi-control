@@ -18,6 +18,7 @@
   * [Atari ST](#atari-st)
   * [Linux](#linux)
   * [Windows](#windows)
+  * [Sharp X68000](#sharp-x68000)
 - [Installation](#installation)
   * [Linux shell completion scripts](#linux-shell-completion-scripts)
     + [bash completion script](#bash-completion-script)
@@ -38,7 +39,7 @@
 * NEW: Smart option autocompletion on Linux using the bash, fish, and zsh shells
 
 ## Usage Summary
-`MT32-PI.EXE`/`MT32-PI.TTP`/`mt32-pi-ctl` accept the following UNIX-style parameters:
+`MT32-PI.EXE`/`MT32-PI.TTP`/`mt32-pi-ctl`/`MT32PI.X` accept the following UNIX-style parameters:
 
 ### Platform-specific options
 #### DOS-specific options
@@ -164,6 +165,10 @@ You need to have `gcc`, `make`, and the ALSA/libasound development headers insta
 
 ### Windows
 The `Makefile` is meant to be used on a Linux host with the `i686-w64-mingw32` toolchain. On Debian/Ubuntu `sudo apt install mingw-w64*` does the job. Afterwards, run `make` and `make dist` in the `win32_src` folder. If you want to compile on Windows, MSYS should work but you might need to adjust the executable names in the Makefile.
+
+### Sharp X68000
+The Makefile is meant to be compiled on a Windows host using [neozeed's toolchain for the X68000](https://sourceforge.net/projects/gcc-1-30-x68000/files/).
+The port currently requires the MCDRV sound driver to be loaded before running. The driver can be found in the [NFGGAMES X68000 File Archive](https://nfggames.com/X68000/index.php/Mirrors/x68pub/x68tools/SOUND/MCDRV/).
 
 ## Installation
 On most platforms installation just means copying the executable file somewhere in your `PATH`, e.g. `/usr/local/bin` on Linux, `C:` on Amiga, `C:\DOS\` on DOS, and similar. Alternatively you could add the path to `mt32-pi-ctl` to your `PATH` variable if that's more to your liking.
