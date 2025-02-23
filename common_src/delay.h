@@ -17,7 +17,19 @@ void delay_ms(unsigned int delay);
 
 static void delay_ms(unsigned int delay) {
 	clock_t start = clock();
-	while(clock() - start < (1000UL*(unsigned long)delay)/CLOCKS_PER_SEC);
+	unsigned int delay_clk;
+	if (delay >= 1000) {
+		/* First wait for the delay in seconds to avoid potential overflow when compiuting delay_clk below */
+		delay_clk = delay / 1000 * CLOCKS_PER_SEC;
+		while(clock() - start < delay_clk);
+		delay %= 1000;
+		start += delay_clk;
+	}
+
+	if (delay > 0) {
+		delay_clk = delay * CLOCKS_PER_SEC / 1000u;
+		while(clock() - start < delay_clk);
+	}
 }
 #endif
 
