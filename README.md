@@ -168,7 +168,6 @@ The `Makefile` is meant to be used on a Linux host with the `i686-w64-mingw32` t
 
 ### Sharp X68000
 The Makefile is meant to be compiled on a Windows host using [neozeed's toolchain for the X68000](https://sourceforge.net/projects/gcc-1-30-x68000/files/).
-The port currently requires the MCDRV sound driver to be loaded before running. The driver can be found in the [NFGGAMES X68000 File Archive](https://nfggames.com/X68000/index.php/Mirrors/x68pub/x68tools/SOUND/MCDRV/).
 
 ## Installation
 On most platforms installation just means copying the executable file somewhere in your `PATH`, e.g. `/usr/local/bin` on Linux, `C:` on Amiga, `C:\DOS\` on DOS, and similar. Alternatively you could add the path to `mt32-pi-ctl` to your `PATH` variable if that's more to your liking.
