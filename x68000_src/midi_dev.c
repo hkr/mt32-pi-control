@@ -68,7 +68,7 @@ int mididev_send_bytes(const unsigned char *buf, int len) {
 	else
 	{
 		for (i = 0; i < len; ++i)
-			midi_write(buf[len]);
+			midi_write(buf[i]);
 	}
 
 	return 0;
