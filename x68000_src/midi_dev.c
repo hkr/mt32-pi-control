@@ -20,7 +20,7 @@ static int midi_driver_type = MIDI_DRIVER_NONE;
 
 static sigjmp_buf  midi_init_env;
 static void sigbus_handler(int sig) {
-    siglongjmp(midi_init_env, 1);
+	siglongjmp(midi_init_env, 1);
 }
 
 int mididev_init(void) {
