@@ -95,7 +95,7 @@ int mididev_send_bytes(const unsigned char *buf, int len) {
 
 void mididev_print_usage(void) {
 	printf("-z vol=[0-255]: Volume of the selected synth.\n");
-	printf("-z sel=[0 or 1]: Select active synth (0=MT32-Pi 1=Wavetable).\n");
+	printf("-z sel=[0 or 1]: Select active synth (0=Wavetable 1=MT32-Pi).\n");
 	printf("-z fm=[0-255/0-255]: Volume of the X68000's FM/PCM audio.\n");
 	printf("-z pi=[0-255/0-255]: Volume of the MT32-Pi.\n");
 	printf("-z wt=[0-255/0-255]: Volume of the wavetable board.\n");
